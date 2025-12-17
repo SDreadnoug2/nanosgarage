@@ -1,0 +1,22 @@
+.Card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.Card__title{
+    font-family: "DotGothic16", sans-serif;
+}
+
+.Card__link{
+
+}
+
+.Card__playButton{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+
+}
