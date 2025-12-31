@@ -1,11 +1,19 @@
 import { AnimatePresence, motion } from "framer-motion";
 import "./VideoDetails.css";
 import type { Video } from "../../types";
+import arrow from "../../../src/assets/arrow.png";
 function VideoDetails({title, url, views, channel, code}: Video) {
-        const detailHover = {
-        "initial" : {x: 0},
-        "hover" : {x: -30}
-    };
+
+    const containerVariant = {
+        initial: { color: "#ffffff", backgroundColor: "#FF6600"},
+        animate: {backgroundColor: "#FF6600"},
+        hover: { color: "#FF6600", backgroundColor: "#ffffff", transition:{duration: 0.1}}
+    }
+
+    const textVariant = {
+        initial: {y: 0},
+        hover: {y: -10}
+    }
 
     return (
             <motion.div 
@@ -36,11 +44,18 @@ function VideoDetails({title, url, views, channel, code}: Video) {
                         <img className="VideoDetails__thumbnail" src="https://i.ytimg.com/vi/Ks8tk1VwYTQ/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFqwJSMBERV-wvz2DC5LyQpU_x2Q"></img>
                     </div>
                     <motion.div className="VideoDetails__watchContainer"
-                    initial={{x: 0}}
-                    whileHover={{x: -30}}
+                    onClick={() => window.open(url)}
+                    variants={containerVariant}
+                    initial="initial"
+                    animate="animate"
+                    exit={{ backgroundColor:"#ff812dff", y: 120 }}
+                    whileHover="hover"
                     >
-                        <p className="VideoDetails__watchText" >WATCH NOW</p>
+                        <motion.p 
+                        variants={textVariant}
+                        className="VideoDetails__watchText">WATCH NOW</motion.p>
                     </motion.div>
+
                 </div>
                 <motion.div>
                     

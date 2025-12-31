@@ -3,6 +3,7 @@ import './App.css'
 import logo from './assets/ng2W.png';
 import Portfolio from './Components/Portfolio/Portoflio';
 import {motion} from "motion/react";
+import Scene from './Components/Scene/Scene';
 function App() {
 
   const [tab, setTab] = useState("");
@@ -75,6 +76,9 @@ function App() {
             About
           </motion.button>
         </nav>
+        <div className="App__3dscene">
+          <Scene/>
+        </div>
       </div>
       <div className="App__sidebar"></div>
       <div className="App__content">
