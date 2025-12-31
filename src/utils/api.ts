@@ -4,7 +4,7 @@ export async function updateVideoViews(videos: Array<Video>) {
     const results = await Promise.all(
     videos.map(async video => {
         const response = await fetch(
-            `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${video.code}&key=AIzaSyBGFH8ibjWOlr5ZrdvugD3AQJ22bNwu8Ww`
+            `https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${video.code}&key=${API_KEY}`
         )
         const data = await response.json();
         return data;       

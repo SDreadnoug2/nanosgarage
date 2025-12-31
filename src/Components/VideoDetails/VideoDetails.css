@@ -1,0 +1,85 @@
+.VideoDetails{
+    background-color: rgb(255, 102, 0);
+    overflow: hidden;
+    height: 100%;
+    border-top: 1px white solid;
+}
+.VideoDetails__videoContainer{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 1px white;
+}
+.VideoDetails__text{
+    align-self: flex-end;
+    margin: 0;
+    font-size: 16px;
+    color: black;
+    padding-right: 10px;
+}
+
+.VideoDetails__title{
+    margin: 0;
+
+}
+
+.VideoDetails__channelContainer{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px white;
+    justify-content: space-between;
+    height: 20%;
+}
+
+
+
+.VideoDetails__views{
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px white;
+    width: 30%;
+}
+
+.VideoDetails__channel{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.VideoDetails__variable{
+    padding-left: 10px;
+}
+
+.VideoDetails__bottomContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.VideoDetails__thumbnailContainer{
+    width: 55%;
+    height: 100%;
+    border-right: solid white 1px;
+    object-fit: contain;
+}
+
+.VideoDetails__thumbnail{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.VideoDetails__watchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    cursor: pointer;
+}
+
+.VideoDetails__watchText{
+    font-size: 64px;
+    text-align: center;
+}
+
